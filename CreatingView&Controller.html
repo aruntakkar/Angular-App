@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Creating View and Controller</title>
+</head>
+
+<body ng-app="myApp">
+    <div class="container" ng-controller="simpleController">
+        <h3>Adding a Simple Controller</h3>
+        <ul>
+            <li ng-repeat="cust in customers">
+                {{ cust.name }} - {{ cust.country }}
+            </li>
+        </ul>
+    </div>
+    <!-- [JS Dependency] -->
+    <script src="scripts/angular/angular.min.js"></script>
+    <script>
+    angular.module('myApp', []).controller('simpleController', function($scope) {
+        $scope.customers = [{
+            name: 'Jani',
+            country: 'Norway'
+        }, {
+            name: 'Hege',
+            country: 'Sweden'
+        }, {
+            name: 'Kai',
+            country: 'Denmark'
+        }];
+    });
+    </script>
+</body>
+
+</html>
