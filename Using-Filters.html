@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Filters</title>
+</head>
+
+<body ng-init="customers=[{name:'John Smith',city:'Phoenix'},{name: 'John Doe',city: 'San Francisco'},{name:'Jane Smith',city:'New York'}]">
+    Name
+    <br>
+    <input type="text" ng-model="name">
+    <br>
+    <ul>
+        <li ng-repeat="cust in customers | filter:name | orderBy:'city'">
+            {{ cust.name | uppercase}} - {{ cust.city | lowercase }}
+        </li>
+    </ul>
+    <!-- [JS Dependency] -->
+    <script src="scripts/angular/angular.min.js"></script>
+</body>
+
+</html>
