@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Module | Controller</title>
+</head>
+
+<body ng-app="demoApp">
+    <div class="container" ng-controller="simpleController">
+        <h3>Just Tesing the Module and Controller</h3>
+        <ul>
+            <li ng-repeat="cust in customers">
+                {{ cust.name }} - {{ cust.city }}
+            </li>
+        </ul>
+    </div>
+    <!-- [JS Dependency] -->
+    <script src="scripts/angular/angular.min.js"></script>
+    <script>
+    // What the Array For
+    // var demoApp = angular.module('demoApp', []);
+    // Module that demoApp depends on
+    // demoApp = angular.module('demoApp', [helperModule]);
+    /*
+    	What I'm doing is telling Angular "Go Find that Module, Go look it up Wherever it is and inject it in and make it available to my Controllers and directives and filters and factories and all that stuff that this particular module might have"
+     */
+    /*
+    Notice that I just have an anonymous function here nested inside So the second parameter here is "OK, so what is the controller object?"well function of course is an object in javascript so we're going to inject in the (scope) and then from there I do the same exact thing we did Before
+     */
+    var demoApp = angular.module('demoApp', []);
+    demoApp.controller('simpleController', function($scope) {
+        $scope.customers = [{
+            name: 'Dave Jones',
+            city: 'Phoenix'
+        }, {
+            name: 'Jamie Riley',
+            city: 'Atlanta'
+        }, {
+            name: 'Heedy Wahlin',
+            city: 'Chandler'
+        }, {
+            name: 'Thomas Wahlin',
+            city: 'Seattle'
+        }];
+    });
+    /**
+     * There are Three Ways to do these:-
+     * 	one way you can create an external 				function and just pass the function in 		with the controller name.
+     *
+     * 	The Second Way you could actually pass a 		name as a string with an anonymous 			function.
+     *
+     * 	The Third Way is we Can come in and do this 	kind of technique
+     *
+     *
+     */
+    </script>
+</body>
+
+</html>
