@@ -1,9 +1,42 @@
 <div class="container">
     <h2>View First</h2> Name:
     <br/>
-    <input type="text" ng-model="name">
+    <input type="text" ng-model="filter.name">
     <br/>
     <ul>
-        <li ng-repeat="cust in customer" | filter:name | orderBy:city/>
+        <li ng-repeat="cust in customer" | filter:filter.name | orderBy:city/>
     </ul>
+    <!--
+		I'm going to make it so that under each customer we can enter a customer name
+     -->
+    <!--
+		I also want to come in and make it so that you can enter a customer city
+     -->
+    <!--
+		We already have "name" - that's our filter Normally I like to do filter.name Whick keeps it really clear
+      -->
+    <!--
+		Then I Change the customer name to say "customer.name" or just to make it really obvious let's say newCustomer.name
+
+		(What that will do is create a new property on the scope, which has a sub-property called "name")
+       -->
+    <br> customer name:
+    <br>
+    <input type="text" ng-model="newCustomer.name">
+    <br> customer city:
+    <br>
+    <input type="text" ng-model="newCustomer.city">
+
+    <!--
+		Then the Final thing we need is a button, We've not seen how to interact with our controller yet let's go ahead and take a look.
+
+		I'm going to add just a standard good old button and another directive we can use is called (ng-click).
+
+		if you go to the documentation for angular there are sevral diffrent options here, ng-click is one of them. I'm going to call addcustomer().
+     -->
+     <br>
+     <button ng-click="addCustomer()">Add Customer</button>
+     <br>
+     <a href="#/view2">View 2</a>
+
 </div>
