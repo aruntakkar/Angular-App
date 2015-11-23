@@ -5,6 +5,6 @@
     <input type="text" ng-model="city">
     <br/>
     <ul>
-        <li ng-repeat="cust in customer" | filter: city | orderBy:name />
+        <li ng-repeat="cust in customers | filter: city | orderBy:'name'">
     </ul>
 </div>
