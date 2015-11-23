@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>View First</h2> Name:
+    <br/>
+    <input type="text" ng-model="name">
+    <br/>
+    <ul>
+        <li ng-repeat="cust in customer" | filter:name | orderBy:city/>
+    </ul>
+</div>

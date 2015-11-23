@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Defining Routes</title>
+</head>
+
+<body>
+    <!-- [JS Dependency] -->
+    <script src="scripts/angular/angular.min.js"></script>
+    <script>
+    // Defining Module Routes
+    var demoApp = angular.module('demoApp', []);
+    demoApp.config(function($routeProvider) {
+        $routeProvider
+            .when('/', {
+                controller: 'simpleController',
+                templateUrl: 'view1.html'
+            })
+            .when('/partials2', {
+                controller: 'simpleController',
+                templateUrl: 'view2.html'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });
+    </script>
+</body>
+
+</html>
