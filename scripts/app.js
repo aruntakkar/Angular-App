@@ -32,13 +32,12 @@ demoApp.controller('simpleController', function($scope) {
         name: 'Thomas Wahlin',
         city: 'Seattle'
     }];
+    // Defining addCustomer for Adding New Customers
+    $scope.addCustomer = function() {
+        $scope.customers.push({
+            name: $scope.newCustomer.name,
+            city: $scope.newCustomer.city
+        });
+    };
 
 });
-
-// Defining addCustomer for Adding New Customers
-$scope.addCustomer = function() {
-    $scope.customer.push({
-        name: $scope.newCustomer.name,
-        city: $scope.newCustomer.city
-    });
-};
