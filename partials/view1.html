@@ -4,7 +4,7 @@
     <input type="text" ng-model="filter.name">
     <br/>
     <ul>
-        <li ng-repeat="cust in customer" | filter:filter.name | orderBy:city/>
+        <li ng-repeat="cust in customer | filter:filter.name | orderBy:'city'"/>
     </ul>
     <!--
 		I'm going to make it so that under each customer we can enter a customer name
@@ -35,7 +35,9 @@
 		if you go to the documentation for angular there are sevral diffrent options here, ng-click is one of them. I'm going to call addcustomer().
      -->
      <br>
+     <br>
      <button ng-click="addCustomer()">Add Customer</button>
+     <br>
      <br>
      <a href="#/view2">View 2</a>
 
