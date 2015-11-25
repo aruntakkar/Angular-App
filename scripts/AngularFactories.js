@@ -1,7 +1,7 @@
 var demoApp = angular.module('demoApp', [])
     .factory('simpleFactory', function() {
         var factory = {};
-        var customers = [...];
+        var customers = [];
         factory.getCustomers = function() {
             return customers;
         };
@@ -9,5 +9,4 @@ var demoApp = angular.module('demoApp', [])
     })
     .controller('simpleController', function($scope,simpleFactory) {
     	// Factory injected into controller at runtime
-
     })
