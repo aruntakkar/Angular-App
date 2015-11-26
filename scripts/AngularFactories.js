@@ -7,6 +7,7 @@ var demoApp = angular.module('demoApp', [])
         };
         return factory;
     })
-    .controller('simpleController', function($scope,simpleFactory) {
-    	// Factory injected into controller at runtime
-    })
+    .controller('simpleController', function($scope, simpleFactory) {
+        // Factory injected into controller at runtime
+        $scope.customers = simpleFactory.getCustomers();
+    });
