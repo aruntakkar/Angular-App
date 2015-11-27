@@ -1,4 +1,7 @@
-Feature of AngularJS is the ability to encapsulate data functionality into factory, services , providers or little value Providers.
+
+Now that you've seen how to create modules and how modules are created then can be used to define routes and also work with controllers, we're going to wrap up by talking about some re-use Concepts.
+
+Another Feature of AngularJS is the ability to encapsulate data functionality into factory, services , provider, or little value providers.
 
 There diffrence B/w the Three is just in way in which they create the object that goes and gets the data.
 
