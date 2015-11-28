@@ -1,0 +1,17 @@
+Feature of AngularJS is the ability to encapsulate data functionality into factory, services , providers or little value Providers.
+
+There diffrence B/w the Three is just in way in which they create the object that goes and gets the data.
+
+Factories:- With the Factory you Actually Create an Object inside of the factory and return it.
+
+
+Service:- With the Service you just have a standard function that uses this keyword to define function.
+
+
+Provider:- With the Provider there's a $get you define and it can be used to get the object that returns the data.
+
+
+Value:- is just a way to get for instance a config value .
+
+
+So For Instance if We Need to go and get customers and I need those customers in multiple controllers , If we didn't want to hard code that data in each controller . It just wouldn't make sense and there'd be a lot of duplication there.
