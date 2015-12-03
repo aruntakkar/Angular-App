@@ -27,7 +27,10 @@ var demoApp = angular.module("demoApp", [])
  *
  * What's really Cool about factories, services and providers is that once you've defined it you can then inject it very easily as a parameter into something like a controller or even other factory if you want a Factory could rely on another factory.
  *
+ * IF We come down to our Controller, you'll see that SimpleController does our standard $scope But notice that the Second Parameter is simpleFactory. well that little name there matches up on Purpose.
  *
+ * What AngularJS is going to do at run time is dynamically inject this into the Controller so now I'll have access to this factory object that's returned out of this function and now I can say factory.getCustomers()
  *
+ * This Provides dependency injection and it Provides a way in which I Know I Can centrally Place where I get Customers data or order data or whatever it may be . In real life app you certainly may have several diffrent factories in the application itself.
  *
  */
