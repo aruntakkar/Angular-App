@@ -1,17 +1,3 @@
-var demoApp = angular.module("demoApp", [])
-    .factory("simpleFactory", function() {
-        var factory = {};
-        var customers = [];
-        factory.getCustomers = function() {
-            return customers;
-        };
-        return factory;
-    })
-    .controller("simpleController", function($scope, simpleFactory) {
-        // Factory Injected into Controller into Runtime
-        $scope.customers = simpleFactory.getCustomers();
-    });
-
 /**
  * In this Example you'll see that down below I have this Controller which I looked at earlier.
  *
@@ -34,3 +20,20 @@ var demoApp = angular.module("demoApp", [])
  * This Provides dependency injection and it Provides a way in which I Know I Can centrally Place where I get Customers data or order data or whatever it may be . In real life app you certainly may have several diffrent factories in the application itself.
  *
  */
+var demoApp = angular.module("demoApp", [])
+    .factory("simpleFactory", function() {
+        var factory = {};
+        var customers = [];
+        factory.getCustomers = function() {
+            return customers;
+        };
+        return factory;
+    })
+    .controller("simpleController", function($scope, simpleFactory) {
+        // Factory Injected into Controller into Runtime
+        $scope.customers = simpleFactory.getCustomers();
+    });
+
+
+
+
