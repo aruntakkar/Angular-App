@@ -39,5 +39,4 @@ demoApp.controller('simpleController', function($scope) {
             city: $scope.newCustomer.city
         });
     };
-
 });
